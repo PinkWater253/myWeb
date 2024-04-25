@@ -1,107 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Shop Acc</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng ký</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/12dcc126b6.js" crossorigin="anonymous"></script>
+</head>
 <body>
-    <div class="container">
-        <!-- phan header -->
-        <div class="header">
-            <!-- item 1 -->
-            <div class="logo">
-                <img src="images/logo.png">
-
-                <ul class="nav_menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Project</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-                
-            </div>
-        </div>  
-
-
-        <section class="banner">
-        </section>
-
-        <section class="banner-1">
-            <div class="o2">
-                <p>123</p>
-                <h4>Projects Completed</h4>
+    <div class="container" id="container">
+        <h1>Wellcome to my Website</h1>
+        <div id="form-signin">
+        <form id="signin-form">
+            <span>Đăng nhập bằng</span>
+            <div class="social-container">
+                <a href="https://www.facebook.com/" target="_blank" class="social"><i class="fa-brands fa-facebook-f" style="color: #eee;"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" class="social"><i class="fa-brands fa-instagram" style="color: #eee;"></i></a>
+                <a href="https://www.tiktok.com/" target="_blank" class="social"><i class="fa-brands fa-tiktok" style="color: #eee;"></i></a>
             </div>
 
-            <div class="o1">
-                <p>84</p>
-                <h4>Happy Clients</h4>
+            <div class="form-group">
+                <label for="username">Tên người dùng:</label>
+                <input type="text" id="username" name="username" placeholder="Nhập tên người dùng">
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu">
+                <div class ="eye-open" id="eye-open"><i class="fa-solid fa-eye" onclick="togglePasswordVisibility()"></i></div>
+                <div class ="eye-close" id="eye-close" ><i class="fa-regular fa-eye-slash" onclick="togglePasswordVisibility()"></i></div>
+            </div>
+            <button type="submit" >Đăng nhập</button>
+        </form>
+        <span>Nếu bạn chưa có tài khoản. Nhấn <button class="other" id="other">tại đây!</button> </span>
+        </div>
+
+        <div id="form-register" class="hidden">
+        <form id="signup-form" onsubmit="return">
+            <span>Tạo tài khoản</span>
+            <div class="form-group">
+                <label for="username">Tên người dùng:</label>
+                <input type="text" id="username" name="username" placeholder="Nhập tên người dùng" required minlength="4">
             </div>
 
-            <div>
-
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Nhập email" required>
             </div>
-        </section>
 
-        <section class="banner-2">
-            <h1>Free consulation with exceptional quality
-            </h1>
-            <p>Just one call alway: 01243454654</p>
-            
-            <form>
-                <button type="button" class="btn">Get selection</button>
-            </form>
-        </section>
-
-        <section class="signal">
-            <div class="signal-content">
-                <p>Project</p>
-                <ul class="nav_menu2">
-                    <li><a href="#">All</a></li>
-                    <li><a href="#">Commercail</a></li>
-                    <li><a href="#">Residential</a></li>
-                    <li><a href="#">Other</a></li>
-                </ul>
-                <img src="images/building.png" alt="" >
-                <img src="images/hotel.png" alt="" >
-                <div class="wish">
-                    <h4>
-                        Wish Stone Building <br> 29972 Westheimer Rd.Santa
-                    </h4>
-                </div>
-                <form>
-                    <button type="button" class="btn-back">Back</button>
-                    <button type="button" class="btn-next">Next</button>
-                </form>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                <div class ="eye-open2" id="eye-open"><i class="fa-solid fa-eye" onclick="togglePasswordVisibility()"></i></div>
+                <div class ="eye-close" id="eye-close" ><i class="fa-regular fa-eye-slash" onclick="togglePasswordVisibility()"></i></div>
             </div>
-        </section>
 
-        <section class="footer">
-
-            <ul>
-                <li><h4>Address:</h4>Địa Chỉ Đang Học Tập Của Sinh Viên</li>
-                <li><h4>Name:</h4>Tên Sinh Viên - MSSV</li>
-                <li><h4>Email:</h4>email sinh viên tại ntu</li>
-                <img src="images/logo.png">
-            </ul>
-
-            <ul>
-                <li><h4>Newlette:</h4></li>
-                <form method="post" action="url">
-                    <input type="text" value=""/> <br/>
-                    <button type="button" class="sub">Subscrise</button>
-                </form>
-                <li><h4>Social:</h4></li>
-                <img src="images/face.png" alt="" width="15%">
-                <img src="images/ins.png" alt="" width="15%">
-                <img src="images/tw.png" alt="" width="15%">
-            </ul>
-
+            <div class="form-group">
+                <label for="re-password">Nhập lại mật khẩu:</label>
+                <input type="password" id="re-password" name="re-password" placeholder="Nhập lại mật khẩu" required>
+                <div class ="eye-open3" id="eye-open"><i class="fa-solid fa-eye" onclick="togglePasswordVisibility()"></i></div>
+                <div class ="eye-close" id="eye-close" ><i class="fa-regular fa-eye-slash" onclick="togglePasswordVisibility()"></i></div>
+            </div>
+            <button type="submit" onclick="validateLogin()">Đăng ký</button>
+        </form>
+        <span>Quay lại trang đăng nhập. Nhấn <button class="other" id="other2"> tại đây!</button> </span>
     </div>
-  
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
